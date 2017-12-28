@@ -2,7 +2,7 @@
 
 ### Description
 
-In week four we've learned about a few different classifiers. In week five we'll learn about webscraping and Natural Language Processing, and some additional classification methods. Now we're going to put those skills to the test.
+This project helps you practice webscraping, NLP and classification models.
 
 ### Scenario
 
@@ -14,7 +14,7 @@ Your piece is going to be on how to create a Reddit post that will get the most 
 
 In this project, we will practice two major skills. Collecting data by scraping a website and then building a binary predictor.
 
-As we discussed in week 2, and earlier today, there are two components to starting a data science problem: the problem statement, and acquiring the data.
+There are two components to starting a data science problem: the problem statement, and acquiring the data.
 
 For this article, your problem statement will be: _What characteristics of a post on Reddit are most predictive of the overall interaction on a thread (as measured by number of comments)?_
 
@@ -27,7 +27,6 @@ Your method for acquiring the data will be scraping the 'hot' threads as listed 
 Once you've got the data, you will build a classification model that, using Natural Language Processing and any other relevant features, predicts whether or not a given Reddit post will have above or below the _median_ number of comments.
 
 **BONUS PROBLEMS**
-1. If creating a logistic regression, GridSearch Ridge and Lasso for this model and report the best hyperparameter values.
 1. Scrape the full text of the threads using Selenium (you'll learn about this in Webscraping II).
 2. Write the actual article that you're pitching and turn it into a blog post that you host on your personal blog.
 
@@ -36,14 +35,15 @@ Once you've got the data, you will build a classification model that, using Natu
 ### Requirements
 
 - Scrape and prepare your data using BeautifulSoup.
+    - We have provided a sample dataset for you.  If you cannot scrape, you can use this data for your modeling, but one of the goals of this project is to practice scraping.  Use this dataset as a last resort!
 - **Create and compare two models**. One of these must be a random forest, however the other can be a classifier of your choosing: logistic regression, KNN, SVM, etc.
 - A Jupyter Notebook with your analysis for a peer audience of data scientists.
 - An executive summary of the results you found.
-- A 10-12 minute presentation outlining your process and findings for a semi-technical audience. The reason we say 'semi-technical' is that FiveThirtyEight wants to see how you plan to explain your findings in your article, and their audience is likely readers who are familiar with and interested in data / statistics, but are not experts. This means that if you'd like to talk about your model works you can, but explain what exactly your model does at a high-level.
+- A 4 minute presentation outlining your process and findings for a semi-technical audience. The reason we say 'semi-technical' is that FiveThirtyEight wants to see how you plan to explain your findings in your article, and their audience is likely readers who are familiar with and interested in data / statistics, but are not experts. This means that if you'd like to talk about your model works you can, but explain what exactly your model does at a high-level.
 
  **Pro Tip:** You can find a good example executive summary [here](https://www.proposify.biz/blog/executive-summary).
 
- **Pro Tip 2:** When building your webscraper, use the `sleep` function to make time in between your individual requests.
+ **Pro Tip 2:** When building your webscraper, use the `sleep` function to make time in between your individual requests.  Check reddit's API documentation to see how many calls they allow.  
 
  **Pro Tip 3:** Build your scraper, and rigorously test it on a few pages to make sure it works before setting it loose on all of Reddit.
 
@@ -57,8 +57,7 @@ Once you've got the data, you will build a classification model that, using Natu
 
 - Code and executive summary must be in a clearly commented Jupyter Notebook.
 - You must submit your slide deck.
-- You must, at minimum, have a link to your slides and a link to your Jupyter notebook on your personal static site.
-- Materials must be submitted by 9 a.m. Friday, November 3rd EST. You will submit a link to your slides, your link to your Jupyter notebook, and your link to your static site via Google form. If your slides are not hosted online, you may Slack your slides to a DSIR.
+- Materials must be submitted by 9 a.m. Friday, November 3rd EST.
 
 ---
 
@@ -66,15 +65,10 @@ Once you've got the data, you will build a classification model that, using Natu
 
 1. We'll be utilizing a dataset derived from live web data: [Reddit.com](https://www.reddit.com/)
 
-2. To get the data, we will use the requests library (or urllib) and BeautifulSoup to scrape the webpage.
+2. To get the data, we will use the requests library (or urllib, or chromedriver) and BeautifulSoup to scrape the webpage.
 
 ---
 
-### Suggested Ways to Get Started
-
-- Read the docs for whatever technologies you use. Most of the time, there is a tutorial that you can follow, but not always, and learning to read documentation is crucial to your success!
-- Document **everything**.
-- Look up sample executive summaries online.
 
 ### Additional Resources
 - [Advice on How to Write for a Non-Technical Audience](http://programmers.stackexchange.com/questions/11523/explaining-technical-things-to-non-technical-people)
@@ -106,11 +100,7 @@ When evaluating projects, there are four areas on which your instructors focus.
   - Were your recommendations data-driven and based on the results of your work?
 
 You will earn a score for each of the four areas mentioned above.
-1. Project Requirements: You may earn a score of 0 or 1. You will earn a score of 1 if all project requirements are met. Otherwise, you will earn a score of 0.
-2. Audience: You may earn a score between 0 and 3. A score of 0 indicates that your presentation is inappropriate for the stakeholder. A score of 1 indicates that at least part of your presentation should be non-trivially reworked to be more appropriate for the stakeholder. A score of 2 indicates that there are few to no areas of your presentation that should be reworked. A score of 3 indicates that your presentation is consistently appropriate for the stakeholder and serves as a model for future presentations.
-3. Methods: You may earn a score between 0 and 3. A score of 0 indicates that your methods are inappropriate. A score of 1 indicates that your methods are somewhat inappropriate, that justification for methodological decisions is lacking, and/or that your conclusions do not follow from the methods. A score of 2 indicates that your methods are appropriate, justification is sufficient/strong, and your conclusions follow well from the methods. A score of 3 indicates that your methods are excellent, strongly defended, and serves model for future presentations.
-4. Value: You may earn a score between 0 and 3. A score of 0 indicates that you provide little to no value to the stakeholder. A score of 1 indicates that the value you provide to the stakeholder is substantially less than expected by not answering the problem, not providing clear recommendations to the stakeholder, and/or providing recommendations that were not data-driven. A score of 2 indicates that the value you provide to the stakeholder is on par with the expectation of providing clear, data-driven recommendations that directly answer the problem posed. A score of 3 indicates that the value you provide to the stakeholder is beyond what is expected and serves as a model for future presentations.
-
-Your final grade will be calculated as follows:
-- If any project requirement is not met, the final grade is 'Fail' with a score of 0.
-- If all project requirements are met, then the final grade is 'Pass' with a score calculated by summing the above scores. Therefore, if all project requirements are met, the final score will be between a 1 and 10.
+1. Data Collection / Cleaning: You may earn a score between 0 and 2.  A score of 0 means your data is not appropriately cleaned.  A score of 1 means that you were not able to scrape your own data, but your data munging was adequate.  If you do not scrape your data, the maximum you can receive is 1.  A score of 2 means you appropriately scraped and cleaned your data.
+2. Audience: You may earn a score between 0 and 2. A score of 0 indicates that your presentation is inappropriate for the stakeholder. A score of 1 indicates that at least part of your presentation should be non-trivially reworked to be more appropriate for the stakeholder. A score of 2 indicates that there are few to no areas of your presentation that should be reworked.
+3. Methods: You may earn a score between 0 and 2. A score of 0 indicates that your methods are inappropriate. A score of 1 indicates that your methods are somewhat inappropriate, that justification for methodological decisions is lacking, and/or that your conclusions do not follow from the methods. A score of 2 indicates that your methods are appropriate, justification is sufficient/strong, and your conclusions follow well from the methods.
+4. Value: You may earn a score between 0 and 2. A score of 0 indicates that you provide little to no value to the stakeholder. A score of 1 indicates that the value you provide to the stakeholder is substantially less than expected by not answering the problem, not providing clear recommendations to the stakeholder, and/or providing recommendations that were not data-driven. A score of 2 indicates that the value you provide to the stakeholder is on par with the expectation of providing clear, data-driven recommendations that directly answer the problem posed.
