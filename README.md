@@ -57,7 +57,7 @@ Once you've got the data, you will build a classification model that, using Natu
 
 - Code and executive summary must be in a clearly commented Jupyter Notebook.
 - You must submit your slide deck.
-- Materials must be submitted by 9 a.m. Friday, November 3rd EST.
+- Materials must be submitted by 9 a.m. Friday, January 26 EST.
 
 ---
 
