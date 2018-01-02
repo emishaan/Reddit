@@ -27,7 +27,7 @@ Your method for acquiring the data will be scraping the 'hot' threads as listed 
 Once you've got the data, you will build a classification model that, using Natural Language Processing and any other relevant features, predicts whether or not a given Reddit post will have above or below the _median_ number of comments.
 
 **BONUS PROBLEMS**
-1. Scrape the full text of the threads using Selenium (you'll learn about this in Webscraping II).
+1. Scrape the full text of the threads using Selenium.
 2. Write the actual article that you're pitching and turn it into a blog post that you host on your personal blog.
 
 ---
